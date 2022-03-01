@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>
+    Chat Stellantis
+</title>
+</head>
+<body>
+  <style>
+    .rw-conversation-container .rw-header{background-color: #D1D2D3;} /*Color Barra arriba chat*/
+    .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #D1D2D3;} /*Color mensajes enviados*/
+    .rw-launcher{background-color: hsl(30, 30%, 30%);} /*Color boton que abre el chat*/
+    .rw-conversation-container .rw-replies {display:inline-block;}
+    .rw-conversation-container .rw-reply{background-color: hsl(197, 87%, 48%); border: 1px solid hsl(250, 69%, 61%);display:block;text-align: center;}
+
+  </style>
+    <script>!(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                customData: { language: "es" },
+                title: 'Lucy', //Nombre cuadro de chat
+                profileAvatar: "images/logoPRAX.png", //Logo del cuadro del chat
+                openLauncherImage: "images/message.png", //Logo circulo antes de abrir chat
+                closeImage: "images/down.svg",
+                socketUrl: "http://187.190.189.116:5005",
+                 params: {
+                  images: {
+                    dims: {
+                      width: 300,
+                      height: 300,
+                    }
+                  },
+                  storage: "session"
+    }
+                // add other props here
+              },
+
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+      </script>
+
+</body>
+
+
+</html>
